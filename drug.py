@@ -2,8 +2,13 @@ import requests
 import json
 import warnings
 import os
+import sys
 
-drug = input("Drug Search: ")
+if len(sys.argv) > 1:
+	drug = sys.argv[1]
+
+else:
+	drug = input("Drug Search: ")
 
 warnings.filterwarnings("ignore")
 
